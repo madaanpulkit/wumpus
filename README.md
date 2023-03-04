@@ -1,1 +1,2 @@
-python wsgi.py
+run the script with <br>
+`python wsgi.py`
