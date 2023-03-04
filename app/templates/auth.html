@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class='main'>
+    <div class='info'>
+    <h1>Welcome, Noble Adventurer!</h1>
+    <p>In <strong>Hunt the Wumpus</strong>, you are an adventurer entering a dungeon looking for a <em>treasure</em>.</p>
+    <p>Your goal is to find the treasure and get out of the dungeon <em>avoiding</em> the <strong>pits where you can fall in</strong> and the </strong>Wumpus</strong>: <em>a monster who kills <strong>anyone</strong> it sees.</em></p>
+</div>
+<div class='setup'>
+    <h1>Code of the dungeon</h1>
+    <form method='POST'>
+        <large>user</large> 
+        <input type="text" id=user" class="auth_input" name="user"/>
+        <large>password</large> 
+        <input type="password" id="password" class="auth_input" name="password"/>
+        <button class='play' type="submit">Enter the Dungeon</button>
+    </form>
+</div>
+{% endblock %}
