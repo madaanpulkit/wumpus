@@ -1,0 +1,91 @@
+/* Center the grid */
+body{
+  background-color: #F0DCB4;
+}
+
+.main, .header, .bottom, .info, .setup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the "Congratulations" and "Game Over" messages */
+.win, .lose {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2em 0;
+}
+
+/* Style the "Play again" button */
+.play {
+  padding: 0.5em 1em;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Style the grid */
+.line {
+  display: flex;
+  justify-content: center;
+}
+
+/* Style the room boxes */
+.room {
+  width: 2em;
+  height: 2em;
+  margin: 0.1em;
+  border: 1px dashed brown;
+}
+
+.curr_room {
+  border: 3px solid brown;
+}
+
+.vis_room {
+  background-color: #A09278;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em; 
+}
+
+.up_down {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left, .right, .up, .down{
+  display: flex;
+  background-color: brown;
+}
+
+.up{
+  margin-bottom: 0.1em;
+}
+
+.down{
+  margin-top: 0.1em;
+}
+
+.left{
+  margin-right: 0.2em;
+}
+
+.right{
+  margin-left: 0.2em;
+}
+
+/* Style the feather icons */
+svg.feather {
+  width: 100%;
+  height: 100%;
+}
