@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class='main'>
+    <div class="win">
+    <h4>Congratulations! You won!</h4>
+    <a href='/'><button class='play'>Play again</button></a>
+</div>
+
+<div class="lose">
+    <h4>Game Over!</h4>
+    <a href='/'><button class='play'>Play again</button></a>
+</div>
+</div>
+
+{% for i in range(height) %}
+    <div class="line">
+    {% for j in range(width) %}
+        {% if i == 0 and j == 0 %}
+            <div class="room curr_room vis_room" x="{{j}}" y="{{i}}"></div>
+        {% else %}
+            <div class="room" x="{{j}}" y="{{i}}"></div>
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endfor %}
+
+<div class="controls">
+    <div class="left"><i data-feather="arrow-left"></i></div>
+    <div class="up_down">
+        <div class="up"><i data-feather="arrow-up"></i></div>
+        <div class="down"><i data-feather="arrow-down"></i></div>
+    </div>
+    <div class="right"><i data-feather="arrow-right"></i></div>    
+</div>
+
+<script>
+    feather.replace()
+</script>
+
+{% endblock %}
