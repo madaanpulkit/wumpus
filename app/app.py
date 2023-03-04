@@ -13,17 +13,28 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 socketio = SocketIO(app)
 
+auth = False
+
 @socketio.on('connect')
 def connect():
     session['sid'] = request.sid
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
+    global auth
     if request.method == 'POST':
-        session['width'] = int(request.form['width'])
-        session['height'] = int(request.form['height'])
-        return generate_dungeon(session['width'], session['height'])
-    return render_template('index.html')
+        if auth:
+            session['width'] = int(request.form['width'])
+            session['height'] = int(request.form['height'])
+            return generate_dungeon(session['width'], session['height'])
+        else:
+            session['user'] = request.form['user']
+            session['password'] = request.form['password']
+            if session['user'] == 'admin' and session['password'] == 'password':
+                auth = True
+    if auth:
+        return render_template('index.html')
+    return render_template('auth.html')
 
 @socketio.on('next_pos')
 def next_pos(message):
