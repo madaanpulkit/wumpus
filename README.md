@@ -11,4 +11,4 @@ python wsgi.py [PORT]
 
 ## Credits
 
-[How to Build a Hunt the Wumpus Game Using Python, Flask, and Socket.io](https://www.section.io/engineering-education/creating-a-simple-hunt-the-wumpus-game-using-python-flask-and-socketio/)
+[@csamuelsm](https://github.com/csamuelsm/) : [How to Build a Hunt the Wumpus Game Using Python, Flask, and Socket.io](https://www.section.io/engineering-education/creating-a-simple-hunt-the-wumpus-game-using-python-flask-and-socketio/)
